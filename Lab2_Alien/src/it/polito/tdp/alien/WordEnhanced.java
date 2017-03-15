@@ -33,7 +33,7 @@ public class WordEnhanced {
 	public String listaTraduzioni(){
 		String temp="";
 		for(int i=0; i<traduzioni.size(); i++){
-			temp+=""+traduzioni.get(i)+" -- ";
+			temp+=traduzioni.get(i)+" ";
 		}
 		return temp;
 	}

@@ -29,6 +29,17 @@ public class AlienDictionary {
 		}
 		return null;
 	}
+
+	public String ricercaParola(String s) {
+		String ricerca="";
+		for(WordEnhanced w: dizionario){
+			if(w.getAlienWord().compareTo(s)==0){
+				ricerca+=w.listaTraduzioni()+"\n";
+			}
+		}
+		return ricerca;
+		
+	}
 	
 	
 }
