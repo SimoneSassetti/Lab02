@@ -90,6 +90,7 @@ public class AlienController {
     void doCerca(ActionEvent event) {
     	String cerca=txtCerca.getText().toLowerCase();
     	String array[]=cerca.split("\\?");
+    	
     	if(array.length>2){
     		txtResult.appendText("E' consentito solo un ? nella stringa.\n");
     		txtCerca.clear();
@@ -99,11 +100,6 @@ public class AlienController {
     	cerca=cerca.replaceAll("\\?", ".");
     	txtResult.appendText("Traduzione/i:\n");
     	txtResult.appendText(ad.ricercaParola(cerca));
-    	
     	txtCerca.clear();
     } 
-    
-    
-    
-    
 }
