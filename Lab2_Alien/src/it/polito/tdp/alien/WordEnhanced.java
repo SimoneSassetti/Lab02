@@ -38,7 +38,6 @@ public class WordEnhanced {
 		return temp;
 	}
 	
-	
 	/*public String compare(String alienWord){
 		return "";
 	}*/

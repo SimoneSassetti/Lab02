@@ -90,33 +90,11 @@ public class AlienController {
     @FXML
     void doCerca(ActionEvent event) {
     	String cerca=txtCerca.getText().toLowerCase();
-    	String array[]=cerca.split("\\?");
-    	char l='a';
-    	String s="";
-    	String temp="";
-    	boolean trovato=false;
     	
-    	txtResult.appendText("Risultati della ricerca:\n");
-    	if(array.length==1 && array[0].matches("[a-zA-Z]+")){
-    		for(int i=0; i<26 && !trovato; i++){
-    			s=array[0];
-    			temp=ad.ricercaParola(s);
-    			trovato=true;
-    		}
-    		txtResult.appendText(temp);
-    		return;
-    	}else if(array.length==2 && array[0].matches("[a-zA-Z]+") && array[1].matches("[a-zA-Z]+")){
-    		for(int i=0; i<26 && !trovato; i++){
-    			String carattere=Character.toString((char) (l+i));
-    			s=""+array[0]+carattere+array[1];
-    			temp=ad.ricercaParola(s);
-    			trovato=true;
-    		}
-    		txtResult.appendText(temp);
-    	}
-    	else{
-    		txtResult.appendText("Parola non trovata!");
-    	}
+    	cerca=cerca.replaceAll("\\?", ".");
+    	txtResult.appendText("Traduzione/i:\n");
+    	txtResult.appendText(ad.ricercaParola(cerca));
+    	
     	txtCerca.clear();
     } 
     

@@ -33,7 +33,7 @@ public class AlienDictionary {
 	public String ricercaParola(String s) {
 		String ricerca="";
 		for(WordEnhanced w: dizionario){
-			if(w.getAlienWord().compareTo(s)==0){
+			if(w.getAlienWord().matches(s)){
 				ricerca+=w.listaTraduzioni()+"\n";
 			}
 		}
