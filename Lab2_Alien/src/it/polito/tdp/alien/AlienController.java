@@ -80,7 +80,6 @@ public class AlienController {
     	txtWord.clear();	
     }
     
-    
     @FXML
     void doReset(ActionEvent event) {
     	txtResult.clear();
