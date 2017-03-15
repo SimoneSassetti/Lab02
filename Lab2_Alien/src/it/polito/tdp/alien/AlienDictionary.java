@@ -37,9 +37,6 @@ public class AlienDictionary {
 				ricerca+=w.listaTraduzioni()+"\n";
 			}
 		}
-		return ricerca;
-		
+		return ricerca;		
 	}
-	
-	
 }

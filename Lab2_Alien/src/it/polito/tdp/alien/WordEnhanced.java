@@ -13,7 +13,6 @@ public class WordEnhanced {
 		this.translation = translation;
 		traduzioni=new LinkedList<String>();
 		traduzioni.add(translation);
-		
 	}
 	public String getAlienWord() {
 		return alienWord;

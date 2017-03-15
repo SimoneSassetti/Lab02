@@ -77,8 +77,7 @@ public class AlienController {
     			txtResult.appendText("Attenzione! E' stato inserito un numero.\n");
     		}
     	}
-    	txtWord.clear();
-    	
+    	txtWord.clear();	
     }
     
     
@@ -90,6 +89,12 @@ public class AlienController {
     @FXML
     void doCerca(ActionEvent event) {
     	String cerca=txtCerca.getText().toLowerCase();
+    	String array[]=cerca.split("\\?");
+    	if(array.length>2){
+    		txtResult.appendText("E' consentito solo un ? nella stringa.\n");
+    		txtCerca.clear();
+    		return;
+    	}
     	
     	cerca=cerca.replaceAll("\\?", ".");
     	txtResult.appendText("Traduzione/i:\n");
