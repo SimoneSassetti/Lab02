@@ -52,7 +52,6 @@ public class AlienController {
     	String array[]=testo.split(" ");
     	
     	if(array.length>=2){
-    	
     		parolaAliena=array[0];
     		traduzione=array[1];
     		if(parolaAliena.matches("[a-zA-Z]+") && traduzione.matches("[a-zA-Z]+")){
@@ -69,7 +68,7 @@ public class AlienController {
     		parolaAliena=array[0];
     		if(parolaAliena.matches("[a-zA-Z]+")){
     			parolaAliena=parolaAliena.toLowerCase();
-    			txtResult.appendText("La traduzione e': "+ad.translateWord(parolaAliena)+"\n");
+    			txtResult.appendText("Traduzione/i:\n"+ad.translateWord(parolaAliena)+"\n");
     		}
     		else{
     			txtResult.appendText("Attenzione! E' stato inserito un numero.\n");
